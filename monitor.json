@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "proyecto": "Netlab Monitor - Proyecto Final",
+    "grupo": 2,
+    "prefijo_lab": "clab-netlab",
+    "ip_reservada_expansion": "172.16.2.52/29"
+  },
+  "subredes": {
+    "VLAN_10_Admin": {
+      "prefijo": "172.16.2.0/27",
+      "vlan_id": 10,
+      "gateway": "172.16.2.1",
+      "router_gateway": "R2"
+    },
+    "VLAN_20_Ventas": {
+      "prefijo": "172.16.2.32/28",
+      "vlan_id": 20,
+      "gateway": "172.16.2.33",
+      "router_gateway": "R2"
+    },
+    "Red_Servidores": {
+      "prefijo": "172.16.2.48/29",
+      "vlan_id": null,
+      "gateway": "172.16.2.49",
+      "router_gateway": "R1"
+    },
+    "WAN_R1_R2": {
+      "prefijo": "172.16.2.56/30",
+      "vlan_id": null
+    },
+    "WAN_R2_R3": {
+      "prefijo": "172.16.2.60/30",
+      "vlan_id": null
+    },
+    "WAN_R1_R3": {
+      "prefijo": "172.16.2.64/30",
+      "vlan_id": null
+    },
+    "Red_Externa": {
+      "prefijo": "203.0.113.0/30",
+      "vlan_id": null,
+      "gateway": "203.0.113.1",
+      "router_gateway": "R1"
+    }
+  },
+  "nodos": {
+    "R1": {
+      "container_name": "clab-netlab-R1",
+      "rol": "router",
+      "ip_principal": "172.16.2.49",
+      "interfaces": [
+        {
+          "iface": "eth1",
+          "ip": "172.16.2.49/29",
+          "vlan": null,
+          "estado_esperado": "UP",
+          "descripcion": "Gateway Red Servidores"
+        },
+        {
+          "iface": "eth2",
+          "ip": "172.16.2.57/30",
+          "vlan": null,
+          "estado_esperado": "UP",
+          "descripcion": "Enlace WAN hacia R2"
+        },
+        {
+          "iface": "eth3",
+          "ip": "172.16.2.65/30",
+          "vlan": null,
+          "estado_esperado": "UP",
+          "descripcion": "Enlace WAN hacia R3"
+        },
+        {
+          "iface": "eth4",
+          "ip": "203.0.113.1/30",
+          "vlan": null,
+          "estado_esperado": "UP",
+          "descripcion": "Interfaz hacia Red Externa (NAT)"
+        }
+      ]
+    },
+    "R2": {
+      "container_name": "clab-netlab-R2",
+      "rol": "router",
+      "ip_principal": "172.16.2.1",
+      "interfaces": [
+        {
+          "iface": "eth1.10",
+          "ip": "172.16.2.1/27",
+          "vlan": 10,
+          "estado_esperado": "UP",
+          "descripcion": "Subinterfaz Gateway VLAN 10 Administracion"
+        },
+        {
+          "iface": "eth1.20",
+          "ip": "172.16.2.33/28",
+          "vlan": 20,
+          "estado_esperado": "UP",
+          "descripcion": "Subinterfaz Gateway VLAN 20 Ventas"
+        },
+        {
+          "iface": "eth2",
+          "ip": "172.16.2.58/30",
+          "vlan": null,
+          "estado_esperado": "UP",
+          "descripcion": "Enlace WAN hacia R1"
+        },
+        {
+          "iface": "eth3",
+          "ip": "172.16.2.61/30",
+          "vlan": null,
+          "estado_esperado": "UP",
+          "descripcion": "Enlace WAN hacia R3"
+        }
+      ]
+    },
+    "R3": {
+      "container_name": "clab-netlab-R3",
+      "rol": "router",
+      "ip_principal": "172.16.2.62",
+      "interfaces": [
+        {
+          "iface": "eth1",
+          "ip": "172.16.2.62/30",
+          "vlan": null,
+          "estado_esperado": "UP",
+          "descripcion": "Enlace WAN hacia R2"
+        },
+        {
+          "iface": "eth2",
+          "ip": "172.16.2.66/30",
+          "vlan": null,
+          "estado_esperado": "UP",
+          "descripcion": "Enlace WAN hacia R1"
+        }
+      ]
+    },
+    "PC-Admin": {
+      "container_name": "clab-netlab-pc-admin",
+      "rol": "cliente",
+      "ip_principal": "172.16.2.2",
+      "gateway": "172.16.2.1",
+      "interfaces": [
+        {
+          "iface": "eth1",
+          "ip": "172.16.2.2/27",
+          "vlan": 10,
+          "estado_esperado": "UP",
+          "descripcion": "Cliente VLAN 10 Administracion"
+        }
+      ]
+    },
+    "PC-Ventas": {
+      "container_name": "clab-netlab-pc-ventas",
+      "rol": "cliente",
+      "ip_principal": "172.16.2.34",
+      "gateway": "172.16.2.33",
+      "interfaces": [
+        {
+          "iface": "eth1",
+          "ip": "172.16.2.34/28",
+          "vlan": 20,
+          "estado_esperado": "UP",
+          "descripcion": "Cliente VLAN 20 Ventas"
+        }
+      ]
+    },
+    "SRV-Web": {
+      "container_name": "clab-netlab-srv-web",
+      "rol": "servidor",
+      "ip_principal": "172.16.2.50",
+      "gateway": "172.16.2.49",
+      "interfaces": [
+        {
+          "iface": "eth1",
+          "ip": "172.16.2.50/29",
+          "vlan": null,
+          "estado_esperado": "UP",
+          "descripcion": "Servidor Web HTTP"
+        }
+      ]
+    },
+    "SRV-Datos": {
+      "container_name": "clab-netlab-srv-datos",
+      "rol": "servidor",
+      "ip_principal": "172.16.2.51",
+      "gateway": "172.16.2.49",
+      "interfaces": [
+        {
+          "iface": "eth1",
+          "ip": "172.16.2.51/29",
+          "vlan": null,
+          "estado_esperado": "UP",
+          "descripcion": "Servidor de Datos TCP"
+        }
+      ]
+    },
+    "Externo": {
+      "container_name": "clab-netlab-externo",
+      "rol": "externo",
+      "ip_principal": "203.0.113.2",
+      "gateway": "203.0.113.1",
+      "interfaces": [
+        {
+          "iface": "eth1",
+          "ip": "203.0.113.2/30",
+          "vlan": null,
+          "estado_esperado": "UP",
+          "descripcion": "Host en Red Externa"
+        }
+      ]
+    }
+  },
+  "rutas_esperadas": {
+    "R1": [
+      {"prefijo": "172.16.2.48/29", "tipo": "conectada"},
+      {"prefijo": "172.16.2.56/30", "tipo": "conectada"},
+      {"prefijo": "172.16.2.64/30", "tipo": "conectada"},
+      {"prefijo": "203.0.113.0/30", "tipo": "conectada"},
+      {"prefijo": "172.16.2.0/27", "tipo": "ospf"},
+      {"prefijo": "172.16.2.32/28", "tipo": "ospf"},
+      {"prefijo": "172.16.2.60/30", "tipo": "ospf"}
+    ],
+    "R2": [
+      {"prefijo": "172.16.2.0/27", "tipo": "conectada"},
+      {"prefijo": "172.16.2.32/28", "tipo": "conectada"},
+      {"prefijo": "172.16.2.56/30", "tipo": "conectada"},
+      {"prefijo": "172.16.2.60/30", "tipo": "conectada"},
+      {"prefijo": "172.16.2.48/29", "tipo": "ospf"},
+      {"prefijo": "172.16.2.64/30", "tipo": "ospf"}
+    ],
+    "R3": [
+      {"prefijo": "172.16.2.60/30", "tipo": "conectada"},
+      {"prefijo": "172.16.2.64/30", "tipo": "conectada"},
+      {"prefijo": "172.16.2.0/27", "tipo": "ospf"},
+      {"prefijo": "172.16.2.32/28", "tipo": "ospf"},
+      {"prefijo": "172.16.2.48/29", "tipo": "ospf"},
+      {"prefijo": "172.16.2.56/30", "tipo": "ospf"}
+    ]
+  },
+  "ospf": {
+    "routers": {
+      "R1": {
+        "vecinos_esperados": ["172.16.2.58", "172.16.2.66"],
+        "min_vecinos_full": 2,
+        "prefijos_ospf": ["172.16.2.0/27", "172.16.2.32/28", "172.16.2.60/30"]
+      },
+      "R2": {
+        "vecinos_esperados": ["172.16.2.57", "172.16.2.62"],
+        "min_vecinos_full": 2,
+        "prefijos_ospf": ["172.16.2.48/29", "172.16.2.64/30"]
+      },
+      "R3": {
+        "vecinos_esperados": ["172.16.2.61", "172.16.2.65"],
+        "min_vecinos_full": 2,
+        "prefijos_ospf": ["172.16.2.0/27", "172.16.2.32/28", "172.16.2.48/29", "172.16.2.56/30"]
+      }
+    }
+  },
+  "pruebas_conectividad": [
+    {
+      "nombre": "PC-Admin hacia SRV-Web",
+      "origen": "PC-Admin",
+      "destino": "SRV-Web",
+      "ip_destino": "172.16.2.50"
+    },
+    {
+      "nombre": "PC-Admin hacia SRV-Datos",
+      "origen": "PC-Admin",
+      "destino": "SRV-Datos",
+      "ip_destino": "172.16.2.51"
+    },
+    {
+      "nombre": "PC-Ventas hacia SRV-Web",
+      "origen": "PC-Ventas",
+      "destino": "SRV-Web",
+      "ip_destino": "172.16.2.50"
+    },
+    {
+      "nombre": "PC-Ventas hacia SRV-Datos",
+      "origen": "PC-Ventas",
+      "destino": "SRV-Datos",
+      "ip_destino": "172.16.2.51"
+    },
+    {
+      "nombre": "PC-Admin hacia Externo",
+      "origen": "PC-Admin",
+      "destino": "Externo",
+      "ip_destino": "203.0.113.2"
+    },
+    {
+      "nombre": "PC-Ventas hacia Externo",
+      "origen": "PC-Ventas",
+      "destino": "Externo",
+      "ip_destino": "203.0.113.2"
+    }
+  ],
+  "servicios": [
+    {
+      "nombre": "Servicio Web HTTP",
+      "nodo": "SRV-Web",
+      "ip": "172.16.2.50",
+      "puerto": 80,
+      "protocolo": "tcp",
+      "tipo_servicio": "http",
+      "clientes_prueba": ["PC-Admin", "PC-Ventas"]
+    },
+    {
+      "nombre": "Servicio de Datos TCP",
+      "nodo": "SRV-Datos",
+      "ip": "172.16.2.51",
+      "puerto": 5000,
+      "protocolo": "tcp",
+      "tipo_servicio": "raw_tcp",
+      "clientes_prueba": ["PC-Admin", "PC-Ventas"]
+    }
+  ],
+  "nat": {
+    "router_nat": "R1",
+    "interfaz_externa": "eth4",
+    "ip_publica_r1": "203.0.113.1",
+    "nodo_externo": "Externo",
+    "ip_externa": "203.0.113.2",
+    "puerto_prueba_identidad": 5555,
+    "clientes_internos": ["PC-Admin", "PC-Ventas"]
+  }
+}
