@@ -1,4 +1,0 @@
-frr defaults traditional
-!
-log stdout
-!
