@@ -1,0 +1,34 @@
+name: netlab-g2
+
+topology:
+  kinds:
+    frr:
+      image: quay.io/frrouting/frr:containerlab-10.7.1
+      daemons: [ospfd]
+    linux:
+      image: nicolaka/netshoot:latest
+
+  nodes:
+    r1: {kind: frr}
+    r2: {kind: frr}
+    r3: {kind: frr}
+    sw-a: {kind: bridge}
+    sw-b: {kind: bridge}
+    pc-admin: {kind: linux, cmd: "sleep infinity"}
+    pc-ventas: {kind: linux, cmd: "sleep infinity"}
+    srv-web: {kind: linux, image: nginx:alpine}
+    srv-datos: {kind: linux, cmd: "sleep infinity"}
+    externo: {kind: linux, cmd: "sleep infinity"}
+
+  links:
+    - endpoints: ["r1:eth2", "r2:eth2"]
+    - endpoints: ["r2:eth3", "r3:eth1"]
+    - endpoints: ["r1:eth3", "r3:eth2"]
+    - endpoints: ["r2:eth1", "sw-a:a1"]
+    - endpoints: ["pc-admin:eth1", "sw-a:a2"]
+    - endpoints: ["pc-ventas:eth1", "sw-a:a3"]
+    - endpoints: ["r1:eth1", "sw-b:b1"]
+    - endpoints: ["srv-web:eth1", "sw-b:b2"]
+    - endpoints: ["srv-datos:eth1", "sw-b:b3"]
+    - endpoints: ["r1:eth4", "externo:eth1"]
+

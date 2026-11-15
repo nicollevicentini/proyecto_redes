@@ -1,67 +1,22 @@
-============================================================================
- INFORME TÉCNICO DE MONITOREO Y DIAGNÓSTICO - GRUPO 2
- Fecha/Hora: 2026-11-15 14:55:04 | Topología: Containerlab Grupo 2
-============================================================================
+
+======================================================================
+INFORME TÉCNICO DE MONITOREO Y DIAGNÓSTICO - GRUPO 2
+Fecha/Hora: 2026-11-15 19:30:20 | Topología: netlab-g2
+======================================================================
 
 RESUMEN DE LAS 8 VERIFICACIONES:
-----------------------------------------------------------------------------
-  [FAIL]   1. Inventario de Nodos
-  [FAIL]   2. Interfaces y VLANs (802.1Q)
-  [FAIL]   3. Tablas de Enrutamiento Kernel
-  [FAIL]   4. Conectividad ICMP y Latencia
-  [FAIL]   5. Servicios de Red (TCP 80, 5000)
-  [FAIL]   6. Adyacencias OSPF (FRRouting)
-  [FAIL]   7. Regla NAT MASQUERADE e IP Origen
-----------------------------------------------------------------------------
-DIAGNÓSTICO JERÁRQUICO POR CAPAS:
-  -> Estado General    : DEGRADADO / CON FALLAS
-  -> Capa Raíz Fallida : Capa de Enlace / Inventario
-  -> Dictamen Técnico  : Existen contenedores caídos o sin interfaz activa. Imposible validar capas superiores.
-============================================================================
-
-DETALLE DE EJECUCIÓN:
-
---- 1_INVENTARIO ---
-  * Nodo R1 [clab-netlab-R1]: FAIL (Contenedor inexistente o apagado)
-  * Nodo R2 [clab-netlab-R2]: FAIL (Contenedor inexistente o apagado)
-  * Nodo R3 [clab-netlab-R3]: FAIL (Contenedor inexistente o apagado)
-  * Nodo PC-Admin [clab-netlab-pc-admin]: FAIL (Contenedor inexistente o apagado)
-  * Nodo PC-Ventas [clab-netlab-pc-ventas]: FAIL (Contenedor inexistente o apagado)
-  * Nodo SRV-Web [clab-netlab-srv-web]: FAIL (Contenedor inexistente o apagado)
-  * Nodo SRV-Datos [clab-netlab-srv-datos]: FAIL (Contenedor inexistente o apagado)
-  * Nodo Externo [clab-netlab-externo]: FAIL (Contenedor inexistente o apagado)
-
---- 2_INTERFACES_VLANS ---
-  * R1: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-R1): Error response from daemon: No such container: clab-netlab-R1)
-  * R2: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-R2): Error response from daemon: No such container: clab-netlab-R2)
-  * R3: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-R3): Error response from daemon: No such container: clab-netlab-R3)
-  * PC-Admin: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-pc-admin): Error response from daemon: No such container: clab-netlab-pc-admin)
-  * PC-Ventas: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-pc-ventas): Error response from daemon: No such container: clab-netlab-pc-ventas)
-  * SRV-Web: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-srv-web): Error response from daemon: No such container: clab-netlab-srv-web)
-  * SRV-Datos: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-srv-datos): Error response from daemon: No such container: clab-netlab-srv-datos)
-  * Externo: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-externo): Error response from daemon: No such container: clab-netlab-externo)
-
---- 3_RUTAS ---
-  * R1 [clab-netlab-R1]: FAIL al consultar tabla de rutas (Fallo en docker exec (clab-netlab-R1): Error response from daemon: No such container: clab-netlab-R1)
-  * R2 [clab-netlab-R2]: FAIL al consultar tabla de rutas (Fallo en docker exec (clab-netlab-R2): Error response from daemon: No such container: clab-netlab-R2)
-  * R3 [clab-netlab-R3]: FAIL al consultar tabla de rutas (Fallo en docker exec (clab-netlab-R3): Error response from daemon: No such container: clab-netlab-R3)
-
---- 4_CONECTIVIDAD ---
-  * PC-Admin hacia SRV-Web (PC-Admin -> 172.16.2.50): FAIL (Error: Fallo en docker exec (clab-netlab-pc-admin): Error response from daemon: No such container: clab-netlab-pc-admin)
-  * PC-Admin hacia SRV-Datos (PC-Admin -> 172.16.2.51): FAIL (Error: Fallo en docker exec (clab-netlab-pc-admin): Error response from daemon: No such container: clab-netlab-pc-admin)
-  * PC-Ventas hacia SRV-Web (PC-Ventas -> 172.16.2.50): FAIL (Error: Fallo en docker exec (clab-netlab-pc-ventas): Error response from daemon: No such container: clab-netlab-pc-ventas)
-  * PC-Ventas hacia SRV-Datos (PC-Ventas -> 172.16.2.51): FAIL (Error: Fallo en docker exec (clab-netlab-pc-ventas): Error response from daemon: No such container: clab-netlab-pc-ventas)
-  * PC-Admin hacia Externo (PC-Admin -> 203.0.113.2): FAIL (Error: Fallo en docker exec (clab-netlab-pc-admin): Error response from daemon: No such container: clab-netlab-pc-admin)
-  * PC-Ventas hacia Externo (PC-Ventas -> 203.0.113.2): FAIL (Error: Fallo en docker exec (clab-netlab-pc-ventas): Error response from daemon: No such container: clab-netlab-pc-ventas)
-
---- 5_SERVICIOS ---
-  * Servicio Web HTTP (SRV-Web:80): FAIL - Proceso no escucha en el servidor (ss -tln)
-  * Servicio de Datos TCP (SRV-Datos:5000): FAIL - Proceso no escucha en el servidor (ss -tln)
-
---- 6_OSPF ---
-  * R1 [clab-netlab-R1]: FAIL al ejecutar vtysh show ip ospf neighbor (Fallo en docker exec (clab-netlab-R1): Error response from daemon: No such container: clab-netlab-R1)
-  * R2 [clab-netlab-R2]: FAIL al ejecutar vtysh show ip ospf neighbor (Fallo en docker exec (clab-netlab-R2): Error response from daemon: No such container: clab-netlab-R2)
-  * R3 [clab-netlab-R3]: FAIL al ejecutar vtysh show ip ospf neighbor (Fallo en docker exec (clab-netlab-R3): Error response from daemon: No such container: clab-netlab-R3)
-
---- 7_NAT ---
-  * R1: FAIL - No se detectó regla MASQUERADE activa en POSTROUTING para eth4
+----------------------------------------------------------------------
+  [ OK ]  1. Inventario de Nodos
+  [ OK ]  2. Interfaces y VLANs (802.1Q)
+  [ OK ]  3. Tablas de Enrutamiento Kernel
+  [ OK ]  4. Conectividad ICMP y Latencia
+  [ OK ]  5. Servicios de Red (TCP 80, 5000)
+  [ OK ]  6. Adyacencias OSPF (FRRouting)
+  [ OK ]  7. Regla NAT MASQUERADE e IP Origen
+  [ OK ]  8. Diagnóstico Jerárquico Multicapa
+----------------------------------------------------------------------
+DIAGNÓSTICO JERÁRQUICO POR CAPAS (Enlace/VLAN -> IP/Gateway -> Rutas/OSPF -> NAT -> Servicios):
+  -> Estado General  : OPERATIVO AL 100% (OK)
+  -> Capa Probable   : Ninguna (Todas las capas saludables)
+  -> Explicación     : Los 8 nodos, enlaces VLAN 802.1Q, vecindades OSPF, traducción NAT y servicios TCP operan sin errores.
+======================================================================

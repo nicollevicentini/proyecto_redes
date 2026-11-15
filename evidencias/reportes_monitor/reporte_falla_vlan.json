@@ -1,0 +1,404 @@
+{
+  "metadata": {
+    "fecha": "2026-11-15 19:32:01",
+    "topologia": "netlab-g2"
+  },
+  "inventario": {
+    "ok": true,
+    "disponibles": 8,
+    "faltantes": 0,
+    "detalles": [
+      {
+        "nodo": "R1",
+        "container": "clab-netlab-g2-r1",
+        "ok": true,
+        "detalle": "Nodo R1 [clab-netlab-g2-r1]: OK (Activo con IP 172.16.2.49)"
+      },
+      {
+        "nodo": "R2",
+        "container": "clab-netlab-g2-r2",
+        "ok": true,
+        "detalle": "Nodo R2 [clab-netlab-g2-r2]: OK (Activo con IP 172.16.2.1)"
+      },
+      {
+        "nodo": "R3",
+        "container": "clab-netlab-g2-r3",
+        "ok": true,
+        "detalle": "Nodo R3 [clab-netlab-g2-r3]: OK (Activo con IP 172.16.2.62)"
+      },
+      {
+        "nodo": "PC-Admin",
+        "container": "clab-netlab-g2-pc-admin",
+        "ok": true,
+        "detalle": "Nodo PC-Admin [clab-netlab-g2-pc-admin]: OK (Activo con IP 172.16.2.2)"
+      },
+      {
+        "nodo": "PC-Ventas",
+        "container": "clab-netlab-g2-pc-ventas",
+        "ok": true,
+        "detalle": "Nodo PC-Ventas [clab-netlab-g2-pc-ventas]: OK (Activo con IP 172.16.2.34)"
+      },
+      {
+        "nodo": "SRV-Web",
+        "container": "clab-netlab-g2-srv-web",
+        "ok": true,
+        "detalle": "Nodo SRV-Web [clab-netlab-g2-srv-web]: OK (Activo con IP 172.16.2.50)"
+      },
+      {
+        "nodo": "SRV-Datos",
+        "container": "clab-netlab-g2-srv-datos",
+        "ok": true,
+        "detalle": "Nodo SRV-Datos [clab-netlab-g2-srv-datos]: OK (Activo con IP 172.16.2.51)"
+      },
+      {
+        "nodo": "Externo",
+        "container": "clab-netlab-g2-externo",
+        "ok": true,
+        "detalle": "Nodo Externo [clab-netlab-g2-externo]: OK (Activo con IP 203.0.113.2)"
+      }
+    ],
+    "resumen": "Resultado Inventario: OK | Disponibles: 8 | Faltantes: 0"
+  },
+  "interfaces": {
+    "ok": false,
+    "fallas": 1,
+    "detalles": [
+      {
+        "nodo": "R1",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "R1 [eth1]: OK (Estado UP, IP 172.16.2.49/29)"
+      },
+      {
+        "nodo": "R1",
+        "iface": "eth2",
+        "ok": true,
+        "detalle": "R1 [eth2]: OK (Estado UP, IP 172.16.2.57/30)"
+      },
+      {
+        "nodo": "R1",
+        "iface": "eth3",
+        "ok": true,
+        "detalle": "R1 [eth3]: OK (Estado UP, IP 172.16.2.65/30)"
+      },
+      {
+        "nodo": "R1",
+        "iface": "eth4",
+        "ok": true,
+        "detalle": "R1 [eth4]: OK (Estado UP, IP 203.0.113.1/29)"
+      },
+      {
+        "nodo": "R2",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "R2 [eth1]: OK (Estado UP, Trunk 802.1Q sin IP)"
+      },
+      {
+        "nodo": "R2",
+        "iface": "eth1.10",
+        "ok": false,
+        "detalle": "R2 [eth1.10]: FAIL (Interfaz en estado DOWN)"
+      },
+      {
+        "nodo": "R2",
+        "iface": "eth1.20",
+        "ok": true,
+        "detalle": "R2 [eth1.20]: OK (Estado UP, IP 172.16.2.33/28, VLAN 20)"
+      },
+      {
+        "nodo": "R2",
+        "iface": "eth2",
+        "ok": true,
+        "detalle": "R2 [eth2]: OK (Estado UP, IP 172.16.2.58/30)"
+      },
+      {
+        "nodo": "R2",
+        "iface": "eth3",
+        "ok": true,
+        "detalle": "R2 [eth3]: OK (Estado UP, IP 172.16.2.61/30)"
+      },
+      {
+        "nodo": "R3",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "R3 [eth1]: OK (Estado UP, IP 172.16.2.62/30)"
+      },
+      {
+        "nodo": "R3",
+        "iface": "eth2",
+        "ok": true,
+        "detalle": "R3 [eth2]: OK (Estado UP, IP 172.16.2.66/30)"
+      },
+      {
+        "nodo": "PC-Admin",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "PC-Admin [eth1]: OK (Estado UP, IP 172.16.2.2/27)"
+      },
+      {
+        "nodo": "PC-Ventas",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "PC-Ventas [eth1]: OK (Estado UP, IP 172.16.2.34/28)"
+      },
+      {
+        "nodo": "SRV-Web",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "SRV-Web [eth1]: OK (Estado UP, IP 172.16.2.50/29)"
+      },
+      {
+        "nodo": "SRV-Datos",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "SRV-Datos [eth1]: OK (Estado UP, IP 172.16.2.51/29)"
+      },
+      {
+        "nodo": "Externo",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "Externo [eth1]: OK (Estado UP, IP 203.0.113.2/29)"
+      }
+    ],
+    "resumen": "Resultado Interfaces/VLANs: FAIL | Fallas: 1"
+  },
+  "rutas": {
+    "ok": false,
+    "fallas": 3,
+    "detalles": [
+      {
+        "router": "R1",
+        "prefijo": "172.16.2.48/29",
+        "ok": true,
+        "detalle": "R1: OK - Ruta 172.16.2.48/29 (CONECTADA) presente -> [172.16.2.48/29 dev eth1 proto kernel scope link src 172.16.2.49]"
+      },
+      {
+        "router": "R1",
+        "prefijo": "172.16.2.56/30",
+        "ok": true,
+        "detalle": "R1: OK - Ruta 172.16.2.56/30 (CONECTADA) presente -> [172.16.2.56/30 dev eth2 proto kernel scope link src 172.16.2.57]"
+      },
+      {
+        "router": "R1",
+        "prefijo": "172.16.2.64/30",
+        "ok": true,
+        "detalle": "R1: OK - Ruta 172.16.2.64/30 (CONECTADA) presente -> [172.16.2.64/30 dev eth3 proto kernel scope link src 172.16.2.65]"
+      },
+      {
+        "router": "R1",
+        "prefijo": "203.0.113.0/29",
+        "ok": true,
+        "detalle": "R1: OK - Ruta 203.0.113.0/29 (CONECTADA) presente -> [203.0.113.0/29 dev eth4 proto kernel scope link src 203.0.113.1]"
+      },
+      {
+        "router": "R1",
+        "prefijo": "172.16.2.0/27",
+        "ok": false,
+        "detalle": "R1: FAIL - Ruta 172.16.2.0/27 (OSPF) NO presente en tabla kernel"
+      },
+      {
+        "router": "R1",
+        "prefijo": "172.16.2.32/28",
+        "ok": true,
+        "detalle": "R1: OK - Ruta 172.16.2.32/28 (OSPF) presente -> [172.16.2.32/28 nhid 23 via 172.16.2.58 dev eth2 proto ospf metric 20]"
+      },
+      {
+        "router": "R1",
+        "prefijo": "172.16.2.60/30",
+        "ok": true,
+        "detalle": "R1: OK - Ruta 172.16.2.60/30 (OSPF) presente -> [172.16.2.60/30 nhid 27 proto ospf metric 20]"
+      },
+      {
+        "router": "R2",
+        "prefijo": "172.16.2.0/27",
+        "ok": false,
+        "detalle": "R2: FAIL - Ruta 172.16.2.0/27 (CONECTADA) NO presente en tabla kernel"
+      },
+      {
+        "router": "R2",
+        "prefijo": "172.16.2.32/28",
+        "ok": true,
+        "detalle": "R2: OK - Ruta 172.16.2.32/28 (CONECTADA) presente -> [172.16.2.32/28 dev eth1.20 proto kernel scope link src 172.16.2.33]"
+      },
+      {
+        "router": "R2",
+        "prefijo": "172.16.2.56/30",
+        "ok": true,
+        "detalle": "R2: OK - Ruta 172.16.2.56/30 (CONECTADA) presente -> [172.16.2.56/30 dev eth2 proto kernel scope link src 172.16.2.58]"
+      },
+      {
+        "router": "R2",
+        "prefijo": "172.16.2.60/30",
+        "ok": true,
+        "detalle": "R2: OK - Ruta 172.16.2.60/30 (CONECTADA) presente -> [172.16.2.60/30 dev eth3 proto kernel scope link src 172.16.2.61]"
+      },
+      {
+        "router": "R2",
+        "prefijo": "172.16.2.48/29",
+        "ok": true,
+        "detalle": "R2: OK - Ruta 172.16.2.48/29 (OSPF) presente -> [172.16.2.48/29 nhid 29 via 172.16.2.57 dev eth2 proto ospf metric 20]"
+      },
+      {
+        "router": "R2",
+        "prefijo": "172.16.2.64/30",
+        "ok": true,
+        "detalle": "R2: OK - Ruta 172.16.2.64/30 (OSPF) presente -> [172.16.2.64/30 nhid 30 proto ospf metric 20]"
+      },
+      {
+        "router": "R2",
+        "prefijo": "203.0.113.0/29",
+        "ok": true,
+        "detalle": "R2: OK - Ruta 203.0.113.0/29 (OSPF) presente -> [203.0.113.0/29 nhid 29 via 172.16.2.57 dev eth2 proto ospf metric 20]"
+      },
+      {
+        "router": "R3",
+        "prefijo": "172.16.2.60/30",
+        "ok": true,
+        "detalle": "R3: OK - Ruta 172.16.2.60/30 (CONECTADA) presente -> [172.16.2.60/30 dev eth1 proto kernel scope link src 172.16.2.62]"
+      },
+      {
+        "router": "R3",
+        "prefijo": "172.16.2.64/30",
+        "ok": true,
+        "detalle": "R3: OK - Ruta 172.16.2.64/30 (CONECTADA) presente -> [172.16.2.64/30 dev eth2 proto kernel scope link src 172.16.2.66]"
+      },
+      {
+        "router": "R3",
+        "prefijo": "172.16.2.0/27",
+        "ok": false,
+        "detalle": "R3: FAIL - Ruta 172.16.2.0/27 (OSPF) NO presente en tabla kernel"
+      },
+      {
+        "router": "R3",
+        "prefijo": "172.16.2.32/28",
+        "ok": true,
+        "detalle": "R3: OK - Ruta 172.16.2.32/28 (OSPF) presente -> [172.16.2.32/28 nhid 17 via 172.16.2.61 dev eth1 proto ospf metric 20]"
+      },
+      {
+        "router": "R3",
+        "prefijo": "172.16.2.48/29",
+        "ok": true,
+        "detalle": "R3: OK - Ruta 172.16.2.48/29 (OSPF) presente -> [172.16.2.48/29 nhid 18 via 172.16.2.65 dev eth2 proto ospf metric 20]"
+      },
+      {
+        "router": "R3",
+        "prefijo": "172.16.2.56/30",
+        "ok": true,
+        "detalle": "R3: OK - Ruta 172.16.2.56/30 (OSPF) presente -> [172.16.2.56/30 nhid 19 proto ospf metric 20]"
+      },
+      {
+        "router": "R3",
+        "prefijo": "203.0.113.0/29",
+        "ok": true,
+        "detalle": "R3: OK - Ruta 203.0.113.0/29 (OSPF) presente -> [203.0.113.0/29 nhid 18 via 172.16.2.65 dev eth2 proto ospf metric 20]"
+      }
+    ],
+    "resumen": "Resultado Rutas: FAIL | Fallas: 3"
+  },
+  "conectividad": {
+    "ok": false,
+    "fallas": 5,
+    "total": 7,
+    "detalles": [
+      {
+        "prueba": "PC-Admin a Gateway R2 (VLAN 10)",
+        "ok": false,
+        "detalle": "PC-Admin a Gateway R2 (VLAN 10) (PC-Admin -> 172.16.2.1): FAIL (100% pérdida)"
+      },
+      {
+        "prueba": "PC-Admin a PC-Ventas (Inter-VLAN)",
+        "ok": false,
+        "detalle": "PC-Admin a PC-Ventas (Inter-VLAN) (PC-Admin -> 172.16.2.34): FAIL (100% pérdida)"
+      },
+      {
+        "prueba": "PC-Admin a SRV-Web (HTTP)",
+        "ok": false,
+        "detalle": "PC-Admin a SRV-Web (HTTP) (PC-Admin -> 172.16.2.50): FAIL (100% pérdida)"
+      },
+      {
+        "prueba": "PC-Admin a SRV-Datos (TCP 5000)",
+        "ok": false,
+        "detalle": "PC-Admin a SRV-Datos (TCP 5000) (PC-Admin -> 172.16.2.51): FAIL (100% pérdida)"
+      },
+      {
+        "prueba": "PC-Admin a Nodo Externo (via NAT)",
+        "ok": false,
+        "detalle": "PC-Admin a Nodo Externo (via NAT) (PC-Admin -> 203.0.113.2): FAIL (100% pérdida)"
+      },
+      {
+        "prueba": "PC-Ventas a SRV-Web",
+        "ok": true,
+        "detalle": "PC-Ventas a SRV-Web (PC-Ventas -> 172.16.2.50): OK (0% pérdida, RTT avg: 0.288 ms, 3 saltos)"
+      },
+      {
+        "prueba": "PC-Ventas a Nodo Externo (via NAT)",
+        "ok": true,
+        "detalle": "PC-Ventas a Nodo Externo (via NAT) (PC-Ventas -> 203.0.113.2): OK (0% pérdida, RTT avg: 0.073 ms, 3 saltos)"
+      }
+    ],
+    "resumen": "Resultado Conectividad: FAIL | Fallas: 5/7"
+  },
+  "servicios": {
+    "ok": false,
+    "fallas": 2,
+    "total": 2,
+    "detalles": [
+      {
+        "servicio": "Servicio Web HTTP Nginx",
+        "ok": false,
+        "detalle": "Servicio Web HTTP Nginx (SRV-Web:80): FAIL - Fallo HTTP desde PC-Admin (código 000)"
+      },
+      {
+        "servicio": "Servicio de Datos Backend TCP 5000",
+        "ok": false,
+        "detalle": "Servicio de Datos Backend TCP 5000 (SRV-Datos:5000): FAIL - Fallo conexión TCP 5000 desde PC-Admin"
+      }
+    ],
+    "resumen": "Resultado Servicios: FAIL | Fallas: 2/2"
+  },
+  "ospf": {
+    "ok": true,
+    "fallas": 0,
+    "total": 3,
+    "detalles": [
+      {
+        "router": "R1",
+        "ok": true,
+        "detalle": "R1: OK (2 vecinos en Full -> 2.2.2.2 (Full/DR), 3.3.3.3 (Full/DR))"
+      },
+      {
+        "router": "R2",
+        "ok": true,
+        "detalle": "R2: OK (2 vecinos en Full -> 1.1.1.1 (Full/Backup), 3.3.3.3 (Full/DR))"
+      },
+      {
+        "router": "R3",
+        "ok": true,
+        "detalle": "R3: OK (2 vecinos en Full -> 2.2.2.2 (Full/Backup), 1.1.1.1 (Full/Backup))"
+      }
+    ],
+    "resumen": "Resultado OSPF: OK | Routers con fallas: 0/3"
+  },
+  "nat": {
+    "ok": false,
+    "fallas": 2,
+    "detalles": [
+      {
+        "componente": "R1",
+        "ok": false,
+        "detalle": "R1: FAIL - No se detectó regla MASQUERADE activa en POSTROUTING para eth4"
+      },
+      {
+        "componente": "Traduccion_NAT",
+        "ok": false,
+        "detalle": "Traducción NAT: FAIL - Nodo Externo no recibió tráfico traducido desde PC-Admin"
+      }
+    ],
+    "resumen": "Resultado NAT: FAIL | Fallas detectadas: 2"
+  },
+  "diagnostico_jerarquico": {
+    "estado": "DEGRADADO / CON FALLAS (FAIL)",
+    "capa": "Enlace/VLAN o Direccionamiento IP",
+    "explicacion": "Contenedores inactivos, interfaces en estado DOWN o etiquetado VLAN 802.1Q incorrecto."
+  }
+}

@@ -1,0 +1,22 @@
+
+======================================================================
+INFORME TÉCNICO DE MONITOREO Y DIAGNÓSTICO - GRUPO 2
+Fecha/Hora: 2026-11-15 19:32:01 | Topología: netlab-g2
+======================================================================
+
+RESUMEN DE LAS 8 VERIFICACIONES:
+----------------------------------------------------------------------
+  [ OK ]  1. Inventario de Nodos
+  [FAIL]  2. Interfaces y VLANs (802.1Q)
+  [FAIL]  3. Tablas de Enrutamiento Kernel
+  [FAIL]  4. Conectividad ICMP y Latencia
+  [FAIL]  5. Servicios de Red (TCP 80, 5000)
+  [ OK ]  6. Adyacencias OSPF (FRRouting)
+  [FAIL]  7. Regla NAT MASQUERADE e IP Origen
+  [FAIL]  8. Diagnóstico Jerárquico Multicapa
+----------------------------------------------------------------------
+DIAGNÓSTICO JERÁRQUICO POR CAPAS (Enlace/VLAN -> IP/Gateway -> Rutas/OSPF -> NAT -> Servicios):
+  -> Estado General  : DEGRADADO / CON FALLAS (FAIL)
+  -> Capa Probable   : Enlace/VLAN o Direccionamiento IP
+  -> Explicación     : Contenedores inactivos, interfaces en estado DOWN o etiquetado VLAN 802.1Q incorrecto.
+======================================================================

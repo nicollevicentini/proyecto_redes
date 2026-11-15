@@ -1,137 +1,404 @@
 {
-  "timestamp": "2026-11-15 14:55:04",
-  "verificaciones": {
-    "1_inventario": {
-      "nombre": "Inventario",
-      "estado": "FAIL",
-      "capa_probable": "Enlace/VLAN",
-      "disponibles": [],
-      "faltantes": [
-        "R1 (clab-netlab-R1 - Apagado/Inexistente)",
-        "R2 (clab-netlab-R2 - Apagado/Inexistente)",
-        "R3 (clab-netlab-R3 - Apagado/Inexistente)",
-        "PC-Admin (clab-netlab-pc-admin - Apagado/Inexistente)",
-        "PC-Ventas (clab-netlab-pc-ventas - Apagado/Inexistente)",
-        "SRV-Web (clab-netlab-srv-web - Apagado/Inexistente)",
-        "SRV-Datos (clab-netlab-srv-datos - Apagado/Inexistente)",
-        "Externo (clab-netlab-externo - Apagado/Inexistente)"
-      ],
-      "detalles": [
-        "Nodo R1 [clab-netlab-R1]: FAIL (Contenedor inexistente o apagado)",
-        "Nodo R2 [clab-netlab-R2]: FAIL (Contenedor inexistente o apagado)",
-        "Nodo R3 [clab-netlab-R3]: FAIL (Contenedor inexistente o apagado)",
-        "Nodo PC-Admin [clab-netlab-pc-admin]: FAIL (Contenedor inexistente o apagado)",
-        "Nodo PC-Ventas [clab-netlab-pc-ventas]: FAIL (Contenedor inexistente o apagado)",
-        "Nodo SRV-Web [clab-netlab-srv-web]: FAIL (Contenedor inexistente o apagado)",
-        "Nodo SRV-Datos [clab-netlab-srv-datos]: FAIL (Contenedor inexistente o apagado)",
-        "Nodo Externo [clab-netlab-externo]: FAIL (Contenedor inexistente o apagado)"
-      ]
-    },
-    "2_interfaces_vlans": {
-      "nombre": "Interfaces y VLANs",
-      "estado": "FAIL",
-      "capa_probable": "Enlace/VLAN",
-      "fallas": [
-        "R1: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-R1): Error response from daemon: No such container: clab-netlab-R1)",
-        "R2: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-R2): Error response from daemon: No such container: clab-netlab-R2)",
-        "R3: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-R3): Error response from daemon: No such container: clab-netlab-R3)",
-        "PC-Admin: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-pc-admin): Error response from daemon: No such container: clab-netlab-pc-admin)",
-        "PC-Ventas: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-pc-ventas): Error response from daemon: No such container: clab-netlab-pc-ventas)",
-        "SRV-Web: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-srv-web): Error response from daemon: No such container: clab-netlab-srv-web)",
-        "SRV-Datos: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-srv-datos): Error response from daemon: No such container: clab-netlab-srv-datos)",
-        "Externo: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-externo): Error response from daemon: No such container: clab-netlab-externo)"
-      ],
-      "detalles": [
-        "R1: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-R1): Error response from daemon: No such container: clab-netlab-R1)",
-        "R2: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-R2): Error response from daemon: No such container: clab-netlab-R2)",
-        "R3: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-R3): Error response from daemon: No such container: clab-netlab-R3)",
-        "PC-Admin: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-pc-admin): Error response from daemon: No such container: clab-netlab-pc-admin)",
-        "PC-Ventas: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-pc-ventas): Error response from daemon: No such container: clab-netlab-pc-ventas)",
-        "SRV-Web: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-srv-web): Error response from daemon: No such container: clab-netlab-srv-web)",
-        "SRV-Datos: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-srv-datos): Error response from daemon: No such container: clab-netlab-srv-datos)",
-        "Externo: FAIL al ejecutar comandos de interfaz (Fallo en docker exec (clab-netlab-externo): Error response from daemon: No such container: clab-netlab-externo)"
-      ]
-    },
-    "3_rutas": {
-      "nombre": "Rutas",
-      "estado": "FAIL",
-      "capa_probable": "Rutas/OSPF",
-      "fallas": [
-        "R1 [clab-netlab-R1]: FAIL al consultar tabla de rutas (Fallo en docker exec (clab-netlab-R1): Error response from daemon: No such container: clab-netlab-R1)",
-        "R2 [clab-netlab-R2]: FAIL al consultar tabla de rutas (Fallo en docker exec (clab-netlab-R2): Error response from daemon: No such container: clab-netlab-R2)",
-        "R3 [clab-netlab-R3]: FAIL al consultar tabla de rutas (Fallo en docker exec (clab-netlab-R3): Error response from daemon: No such container: clab-netlab-R3)"
-      ],
-      "detalles": [
-        "R1 [clab-netlab-R1]: FAIL al consultar tabla de rutas (Fallo en docker exec (clab-netlab-R1): Error response from daemon: No such container: clab-netlab-R1)",
-        "R2 [clab-netlab-R2]: FAIL al consultar tabla de rutas (Fallo en docker exec (clab-netlab-R2): Error response from daemon: No such container: clab-netlab-R2)",
-        "R3 [clab-netlab-R3]: FAIL al consultar tabla de rutas (Fallo en docker exec (clab-netlab-R3): Error response from daemon: No such container: clab-netlab-R3)"
-      ]
-    },
-    "4_conectividad": {
-      "nombre": "Conectividad",
-      "estado": "FAIL",
-      "capa_probable": "IP/Gateway",
-      "fallas": [
-        "PC-Admin hacia SRV-Web (PC-Admin -> 172.16.2.50): FAIL (Error: Fallo en docker exec (clab-netlab-pc-admin): Error response from daemon: No such container: clab-netlab-pc-admin)",
-        "PC-Admin hacia SRV-Datos (PC-Admin -> 172.16.2.51): FAIL (Error: Fallo en docker exec (clab-netlab-pc-admin): Error response from daemon: No such container: clab-netlab-pc-admin)",
-        "PC-Ventas hacia SRV-Web (PC-Ventas -> 172.16.2.50): FAIL (Error: Fallo en docker exec (clab-netlab-pc-ventas): Error response from daemon: No such container: clab-netlab-pc-ventas)",
-        "PC-Ventas hacia SRV-Datos (PC-Ventas -> 172.16.2.51): FAIL (Error: Fallo en docker exec (clab-netlab-pc-ventas): Error response from daemon: No such container: clab-netlab-pc-ventas)",
-        "PC-Admin hacia Externo (PC-Admin -> 203.0.113.2): FAIL (Error: Fallo en docker exec (clab-netlab-pc-admin): Error response from daemon: No such container: clab-netlab-pc-admin)",
-        "PC-Ventas hacia Externo (PC-Ventas -> 203.0.113.2): FAIL (Error: Fallo en docker exec (clab-netlab-pc-ventas): Error response from daemon: No such container: clab-netlab-pc-ventas)"
-      ],
-      "detalles": [
-        "PC-Admin hacia SRV-Web (PC-Admin -> 172.16.2.50): FAIL (Error: Fallo en docker exec (clab-netlab-pc-admin): Error response from daemon: No such container: clab-netlab-pc-admin)",
-        "PC-Admin hacia SRV-Datos (PC-Admin -> 172.16.2.51): FAIL (Error: Fallo en docker exec (clab-netlab-pc-admin): Error response from daemon: No such container: clab-netlab-pc-admin)",
-        "PC-Ventas hacia SRV-Web (PC-Ventas -> 172.16.2.50): FAIL (Error: Fallo en docker exec (clab-netlab-pc-ventas): Error response from daemon: No such container: clab-netlab-pc-ventas)",
-        "PC-Ventas hacia SRV-Datos (PC-Ventas -> 172.16.2.51): FAIL (Error: Fallo en docker exec (clab-netlab-pc-ventas): Error response from daemon: No such container: clab-netlab-pc-ventas)",
-        "PC-Admin hacia Externo (PC-Admin -> 203.0.113.2): FAIL (Error: Fallo en docker exec (clab-netlab-pc-admin): Error response from daemon: No such container: clab-netlab-pc-admin)",
-        "PC-Ventas hacia Externo (PC-Ventas -> 203.0.113.2): FAIL (Error: Fallo en docker exec (clab-netlab-pc-ventas): Error response from daemon: No such container: clab-netlab-pc-ventas)"
-      ]
-    },
-    "5_servicios": {
-      "nombre": "Servicios",
-      "estado": "FAIL",
-      "capa_probable": "Servicios",
-      "fallas": [
-        "Servicio Web HTTP (SRV-Web:80): FAIL - Proceso no escucha en el servidor (ss -tln)",
-        "Servicio de Datos TCP (SRV-Datos:5000): FAIL - Proceso no escucha en el servidor (ss -tln)"
-      ],
-      "detalles": [
-        "Servicio Web HTTP (SRV-Web:80): FAIL - Proceso no escucha en el servidor (ss -tln)",
-        "Servicio de Datos TCP (SRV-Datos:5000): FAIL - Proceso no escucha en el servidor (ss -tln)"
-      ]
-    },
-    "6_ospf": {
-      "nombre": "OSPF",
-      "estado": "FAIL",
-      "capa_probable": "Rutas/OSPF",
-      "fallas": [
-        "R1 [clab-netlab-R1]: FAIL al ejecutar vtysh show ip ospf neighbor (Fallo en docker exec (clab-netlab-R1): Error response from daemon: No such container: clab-netlab-R1)",
-        "R2 [clab-netlab-R2]: FAIL al ejecutar vtysh show ip ospf neighbor (Fallo en docker exec (clab-netlab-R2): Error response from daemon: No such container: clab-netlab-R2)",
-        "R3 [clab-netlab-R3]: FAIL al ejecutar vtysh show ip ospf neighbor (Fallo en docker exec (clab-netlab-R3): Error response from daemon: No such container: clab-netlab-R3)"
-      ],
-      "detalles": [
-        "R1 [clab-netlab-R1]: FAIL al ejecutar vtysh show ip ospf neighbor (Fallo en docker exec (clab-netlab-R1): Error response from daemon: No such container: clab-netlab-R1)",
-        "R2 [clab-netlab-R2]: FAIL al ejecutar vtysh show ip ospf neighbor (Fallo en docker exec (clab-netlab-R2): Error response from daemon: No such container: clab-netlab-R2)",
-        "R3 [clab-netlab-R3]: FAIL al ejecutar vtysh show ip ospf neighbor (Fallo en docker exec (clab-netlab-R3): Error response from daemon: No such container: clab-netlab-R3)"
-      ]
-    },
-    "7_nat": {
-      "nombre": "NAT",
-      "estado": "FAIL",
-      "capa_probable": "NAT",
-      "fallas": [
-        "R1: FAIL - No se detectó regla MASQUERADE activa en POSTROUTING para eth4",
-        "Traducción NAT: FAIL - Tráfico no fue traducido a 203.0.113.1"
-      ],
-      "detalles": [
-        "R1: FAIL - No se detectó regla MASQUERADE activa en POSTROUTING para eth4"
-      ]
-    }
+  "metadata": {
+    "fecha": "2026-11-15 19:30:20",
+    "topologia": "netlab-g2"
   },
-  "diagnostico": {
-    "capa_raiz": "Capa de Enlace / Inventario",
-    "dictamen": "Existen contenedores caídos o sin interfaz activa. Imposible validar capas superiores.",
-    "estado_general": "FAIL"
+  "inventario": {
+    "ok": true,
+    "disponibles": 8,
+    "faltantes": 0,
+    "detalles": [
+      {
+        "nodo": "R1",
+        "container": "clab-netlab-g2-r1",
+        "ok": true,
+        "detalle": "Nodo R1 [clab-netlab-g2-r1]: OK (Activo con IP 172.16.2.49)"
+      },
+      {
+        "nodo": "R2",
+        "container": "clab-netlab-g2-r2",
+        "ok": true,
+        "detalle": "Nodo R2 [clab-netlab-g2-r2]: OK (Activo con IP 172.16.2.1)"
+      },
+      {
+        "nodo": "R3",
+        "container": "clab-netlab-g2-r3",
+        "ok": true,
+        "detalle": "Nodo R3 [clab-netlab-g2-r3]: OK (Activo con IP 172.16.2.62)"
+      },
+      {
+        "nodo": "PC-Admin",
+        "container": "clab-netlab-g2-pc-admin",
+        "ok": true,
+        "detalle": "Nodo PC-Admin [clab-netlab-g2-pc-admin]: OK (Activo con IP 172.16.2.2)"
+      },
+      {
+        "nodo": "PC-Ventas",
+        "container": "clab-netlab-g2-pc-ventas",
+        "ok": true,
+        "detalle": "Nodo PC-Ventas [clab-netlab-g2-pc-ventas]: OK (Activo con IP 172.16.2.34)"
+      },
+      {
+        "nodo": "SRV-Web",
+        "container": "clab-netlab-g2-srv-web",
+        "ok": true,
+        "detalle": "Nodo SRV-Web [clab-netlab-g2-srv-web]: OK (Activo con IP 172.16.2.50)"
+      },
+      {
+        "nodo": "SRV-Datos",
+        "container": "clab-netlab-g2-srv-datos",
+        "ok": true,
+        "detalle": "Nodo SRV-Datos [clab-netlab-g2-srv-datos]: OK (Activo con IP 172.16.2.51)"
+      },
+      {
+        "nodo": "Externo",
+        "container": "clab-netlab-g2-externo",
+        "ok": true,
+        "detalle": "Nodo Externo [clab-netlab-g2-externo]: OK (Activo con IP 203.0.113.2)"
+      }
+    ],
+    "resumen": "Resultado Inventario: OK | Disponibles: 8 | Faltantes: 0"
+  },
+  "interfaces": {
+    "ok": true,
+    "fallas": 0,
+    "detalles": [
+      {
+        "nodo": "R1",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "R1 [eth1]: OK (Estado UP, IP 172.16.2.49/29)"
+      },
+      {
+        "nodo": "R1",
+        "iface": "eth2",
+        "ok": true,
+        "detalle": "R1 [eth2]: OK (Estado UP, IP 172.16.2.57/30)"
+      },
+      {
+        "nodo": "R1",
+        "iface": "eth3",
+        "ok": true,
+        "detalle": "R1 [eth3]: OK (Estado UP, IP 172.16.2.65/30)"
+      },
+      {
+        "nodo": "R1",
+        "iface": "eth4",
+        "ok": true,
+        "detalle": "R1 [eth4]: OK (Estado UP, IP 203.0.113.1/29)"
+      },
+      {
+        "nodo": "R2",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "R2 [eth1]: OK (Estado UP, Trunk 802.1Q sin IP)"
+      },
+      {
+        "nodo": "R2",
+        "iface": "eth1.10",
+        "ok": true,
+        "detalle": "R2 [eth1.10]: OK (Estado UP, IP 172.16.2.1/27, VLAN 10)"
+      },
+      {
+        "nodo": "R2",
+        "iface": "eth1.20",
+        "ok": true,
+        "detalle": "R2 [eth1.20]: OK (Estado UP, IP 172.16.2.33/28, VLAN 20)"
+      },
+      {
+        "nodo": "R2",
+        "iface": "eth2",
+        "ok": true,
+        "detalle": "R2 [eth2]: OK (Estado UP, IP 172.16.2.58/30)"
+      },
+      {
+        "nodo": "R2",
+        "iface": "eth3",
+        "ok": true,
+        "detalle": "R2 [eth3]: OK (Estado UP, IP 172.16.2.61/30)"
+      },
+      {
+        "nodo": "R3",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "R3 [eth1]: OK (Estado UP, IP 172.16.2.62/30)"
+      },
+      {
+        "nodo": "R3",
+        "iface": "eth2",
+        "ok": true,
+        "detalle": "R3 [eth2]: OK (Estado UP, IP 172.16.2.66/30)"
+      },
+      {
+        "nodo": "PC-Admin",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "PC-Admin [eth1]: OK (Estado UP, IP 172.16.2.2/27)"
+      },
+      {
+        "nodo": "PC-Ventas",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "PC-Ventas [eth1]: OK (Estado UP, IP 172.16.2.34/28)"
+      },
+      {
+        "nodo": "SRV-Web",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "SRV-Web [eth1]: OK (Estado UP, IP 172.16.2.50/29)"
+      },
+      {
+        "nodo": "SRV-Datos",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "SRV-Datos [eth1]: OK (Estado UP, IP 172.16.2.51/29)"
+      },
+      {
+        "nodo": "Externo",
+        "iface": "eth1",
+        "ok": true,
+        "detalle": "Externo [eth1]: OK (Estado UP, IP 203.0.113.2/29)"
+      }
+    ],
+    "resumen": "Resultado Interfaces/VLANs: OK | Fallas: 0"
+  },
+  "rutas": {
+    "ok": true,
+    "fallas": 0,
+    "detalles": [
+      {
+        "router": "R1",
+        "prefijo": "172.16.2.48/29",
+        "ok": true,
+        "detalle": "R1: OK - Ruta 172.16.2.48/29 (CONECTADA) presente -> [172.16.2.48/29 dev eth1 proto kernel scope link src 172.16.2.49]"
+      },
+      {
+        "router": "R1",
+        "prefijo": "172.16.2.56/30",
+        "ok": true,
+        "detalle": "R1: OK - Ruta 172.16.2.56/30 (CONECTADA) presente -> [172.16.2.56/30 dev eth2 proto kernel scope link src 172.16.2.57]"
+      },
+      {
+        "router": "R1",
+        "prefijo": "172.16.2.64/30",
+        "ok": true,
+        "detalle": "R1: OK - Ruta 172.16.2.64/30 (CONECTADA) presente -> [172.16.2.64/30 dev eth3 proto kernel scope link src 172.16.2.65]"
+      },
+      {
+        "router": "R1",
+        "prefijo": "203.0.113.0/29",
+        "ok": true,
+        "detalle": "R1: OK - Ruta 203.0.113.0/29 (CONECTADA) presente -> [203.0.113.0/29 dev eth4 proto kernel scope link src 203.0.113.1]"
+      },
+      {
+        "router": "R1",
+        "prefijo": "172.16.2.0/27",
+        "ok": true,
+        "detalle": "R1: OK - Ruta 172.16.2.0/27 (OSPF) presente -> [172.16.2.0/27 nhid 23 via 172.16.2.58 dev eth2 proto ospf metric 20]"
+      },
+      {
+        "router": "R1",
+        "prefijo": "172.16.2.32/28",
+        "ok": true,
+        "detalle": "R1: OK - Ruta 172.16.2.32/28 (OSPF) presente -> [172.16.2.32/28 nhid 23 via 172.16.2.58 dev eth2 proto ospf metric 20]"
+      },
+      {
+        "router": "R1",
+        "prefijo": "172.16.2.60/30",
+        "ok": true,
+        "detalle": "R1: OK - Ruta 172.16.2.60/30 (OSPF) presente -> [172.16.2.60/30 nhid 27 proto ospf metric 20]"
+      },
+      {
+        "router": "R2",
+        "prefijo": "172.16.2.0/27",
+        "ok": true,
+        "detalle": "R2: OK - Ruta 172.16.2.0/27 (CONECTADA) presente -> [172.16.2.0/27 dev eth1.10 proto kernel scope link src 172.16.2.1]"
+      },
+      {
+        "router": "R2",
+        "prefijo": "172.16.2.32/28",
+        "ok": true,
+        "detalle": "R2: OK - Ruta 172.16.2.32/28 (CONECTADA) presente -> [172.16.2.32/28 dev eth1.20 proto kernel scope link src 172.16.2.33]"
+      },
+      {
+        "router": "R2",
+        "prefijo": "172.16.2.56/30",
+        "ok": true,
+        "detalle": "R2: OK - Ruta 172.16.2.56/30 (CONECTADA) presente -> [172.16.2.56/30 dev eth2 proto kernel scope link src 172.16.2.58]"
+      },
+      {
+        "router": "R2",
+        "prefijo": "172.16.2.60/30",
+        "ok": true,
+        "detalle": "R2: OK - Ruta 172.16.2.60/30 (CONECTADA) presente -> [172.16.2.60/30 dev eth3 proto kernel scope link src 172.16.2.61]"
+      },
+      {
+        "router": "R2",
+        "prefijo": "172.16.2.48/29",
+        "ok": true,
+        "detalle": "R2: OK - Ruta 172.16.2.48/29 (OSPF) presente -> [172.16.2.48/29 nhid 29 via 172.16.2.57 dev eth2 proto ospf metric 20]"
+      },
+      {
+        "router": "R2",
+        "prefijo": "172.16.2.64/30",
+        "ok": true,
+        "detalle": "R2: OK - Ruta 172.16.2.64/30 (OSPF) presente -> [172.16.2.64/30 nhid 30 proto ospf metric 20]"
+      },
+      {
+        "router": "R2",
+        "prefijo": "203.0.113.0/29",
+        "ok": true,
+        "detalle": "R2: OK - Ruta 203.0.113.0/29 (OSPF) presente -> [203.0.113.0/29 nhid 29 via 172.16.2.57 dev eth2 proto ospf metric 20]"
+      },
+      {
+        "router": "R3",
+        "prefijo": "172.16.2.60/30",
+        "ok": true,
+        "detalle": "R3: OK - Ruta 172.16.2.60/30 (CONECTADA) presente -> [172.16.2.60/30 dev eth1 proto kernel scope link src 172.16.2.62]"
+      },
+      {
+        "router": "R3",
+        "prefijo": "172.16.2.64/30",
+        "ok": true,
+        "detalle": "R3: OK - Ruta 172.16.2.64/30 (CONECTADA) presente -> [172.16.2.64/30 dev eth2 proto kernel scope link src 172.16.2.66]"
+      },
+      {
+        "router": "R3",
+        "prefijo": "172.16.2.0/27",
+        "ok": true,
+        "detalle": "R3: OK - Ruta 172.16.2.0/27 (OSPF) presente -> [172.16.2.0/27 nhid 17 via 172.16.2.61 dev eth1 proto ospf metric 20]"
+      },
+      {
+        "router": "R3",
+        "prefijo": "172.16.2.32/28",
+        "ok": true,
+        "detalle": "R3: OK - Ruta 172.16.2.32/28 (OSPF) presente -> [172.16.2.32/28 nhid 17 via 172.16.2.61 dev eth1 proto ospf metric 20]"
+      },
+      {
+        "router": "R3",
+        "prefijo": "172.16.2.48/29",
+        "ok": true,
+        "detalle": "R3: OK - Ruta 172.16.2.48/29 (OSPF) presente -> [172.16.2.48/29 nhid 18 via 172.16.2.65 dev eth2 proto ospf metric 20]"
+      },
+      {
+        "router": "R3",
+        "prefijo": "172.16.2.56/30",
+        "ok": true,
+        "detalle": "R3: OK - Ruta 172.16.2.56/30 (OSPF) presente -> [172.16.2.56/30 nhid 19 proto ospf metric 20]"
+      },
+      {
+        "router": "R3",
+        "prefijo": "203.0.113.0/29",
+        "ok": true,
+        "detalle": "R3: OK - Ruta 203.0.113.0/29 (OSPF) presente -> [203.0.113.0/29 nhid 18 via 172.16.2.65 dev eth2 proto ospf metric 20]"
+      }
+    ],
+    "resumen": "Resultado Rutas: OK | Fallas: 0"
+  },
+  "conectividad": {
+    "ok": true,
+    "fallas": 0,
+    "total": 7,
+    "detalles": [
+      {
+        "prueba": "PC-Admin a Gateway R2 (VLAN 10)",
+        "ok": true,
+        "detalle": "PC-Admin a Gateway R2 (VLAN 10) (PC-Admin -> 172.16.2.1): OK (0% pérdida, RTT avg: 0.060 ms, 1 saltos)"
+      },
+      {
+        "prueba": "PC-Admin a PC-Ventas (Inter-VLAN)",
+        "ok": true,
+        "detalle": "PC-Admin a PC-Ventas (Inter-VLAN) (PC-Admin -> 172.16.2.34): OK (0% pérdida, RTT avg: 0.077 ms, 2 saltos)"
+      },
+      {
+        "prueba": "PC-Admin a SRV-Web (HTTP)",
+        "ok": true,
+        "detalle": "PC-Admin a SRV-Web (HTTP) (PC-Admin -> 172.16.2.50): OK (0% pérdida, RTT avg: 0.089 ms, 3 saltos)"
+      },
+      {
+        "prueba": "PC-Admin a SRV-Datos (TCP 5000)",
+        "ok": true,
+        "detalle": "PC-Admin a SRV-Datos (TCP 5000) (PC-Admin -> 172.16.2.51): OK (0% pérdida, RTT avg: 0.093 ms, 3 saltos)"
+      },
+      {
+        "prueba": "PC-Admin a Nodo Externo (via NAT)",
+        "ok": true,
+        "detalle": "PC-Admin a Nodo Externo (via NAT) (PC-Admin -> 203.0.113.2): OK (0% pérdida, RTT avg: 0.085 ms, 3 saltos)"
+      },
+      {
+        "prueba": "PC-Ventas a SRV-Web",
+        "ok": true,
+        "detalle": "PC-Ventas a SRV-Web (PC-Ventas -> 172.16.2.50): OK (0% pérdida, RTT avg: 0.154 ms, 3 saltos)"
+      },
+      {
+        "prueba": "PC-Ventas a Nodo Externo (via NAT)",
+        "ok": true,
+        "detalle": "PC-Ventas a Nodo Externo (via NAT) (PC-Ventas -> 203.0.113.2): OK (0% pérdida, RTT avg: 0.070 ms, 3 saltos)"
+      }
+    ],
+    "resumen": "Resultado Conectividad: OK | Fallas: 0/7"
+  },
+  "servicios": {
+    "ok": true,
+    "fallas": 0,
+    "total": 2,
+    "detalles": [
+      {
+        "servicio": "Servicio Web HTTP Nginx",
+        "ok": true,
+        "detalle": "Servicio Web HTTP Nginx (172.16.2.50:80): OK (HTTP 200 OK)"
+      },
+      {
+        "servicio": "Servicio de Datos Backend TCP 5000",
+        "ok": true,
+        "detalle": "Servicio de Datos Backend TCP 5000 (172.16.2.51:5000): OK (Activo y accesible vía TCP)"
+      }
+    ],
+    "resumen": "Resultado Servicios: OK | Fallas: 0/2"
+  },
+  "ospf": {
+    "ok": true,
+    "fallas": 0,
+    "total": 3,
+    "detalles": [
+      {
+        "router": "R1",
+        "ok": true,
+        "detalle": "R1: OK (2 vecinos en Full -> 2.2.2.2 (Full/DR), 3.3.3.3 (Full/DR))"
+      },
+      {
+        "router": "R2",
+        "ok": true,
+        "detalle": "R2: OK (2 vecinos en Full -> 1.1.1.1 (Full/Backup), 3.3.3.3 (Full/DR))"
+      },
+      {
+        "router": "R3",
+        "ok": true,
+        "detalle": "R3: OK (2 vecinos en Full -> 2.2.2.2 (Full/Backup), 1.1.1.1 (Full/Backup))"
+      }
+    ],
+    "resumen": "Resultado OSPF: OK | Routers con fallas: 0/3"
+  },
+  "nat": {
+    "ok": true,
+    "fallas": 0,
+    "detalles": [
+      {
+        "componente": "R1",
+        "ok": true,
+        "detalle": "R1: OK - Regla MASQUERADE y reenvío IPv4 activos en POSTROUTING para eth4"
+      },
+      {
+        "componente": "Traduccion_NAT",
+        "ok": true,
+        "detalle": "Traducción NAT: OK - Nodo Externo recibió tráfico con la IP pública de R1 (203.0.113.1)"
+      }
+    ],
+    "resumen": "Resultado NAT: OK | Fallas detectadas: 0"
+  },
+  "diagnostico_jerarquico": {
+    "estado": "OPERATIVO AL 100% (OK)",
+    "capa": "Ninguna (Todas las capas saludables)",
+    "explicacion": "Los 8 nodos, enlaces VLAN 802.1Q, vecindades OSPF, traducción NAT y servicios TCP operan sin errores."
   }
 }

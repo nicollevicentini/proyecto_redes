@@ -1,0 +1,51 @@
+---
+sw-a:
+    username: 
+    password: 
+    platform: bridge
+    hostname: 
+sw-b:
+    username: 
+    password: 
+    platform: bridge
+    hostname: 
+r1:
+    username: admin
+    password: admin
+    platform: frr
+    hostname: 172.20.20.12
+r2:
+    username: admin
+    password: admin
+    platform: frr
+    hostname: 172.20.20.13
+r3:
+    username: admin
+    password: admin
+    platform: frr
+    hostname: 172.20.20.17
+externo:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.15
+pc-admin:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.16
+pc-ventas:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.19
+srv-datos:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.18
+srv-web:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.14
