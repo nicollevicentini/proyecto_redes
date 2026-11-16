@@ -36,11 +36,13 @@ net srv-web ip addr replace 172.16.2.50/29 dev eth1
 net srv-web ip route replace default via 172.16.2.49 dev eth1
 net srv-datos ip addr replace 172.16.2.51/29 dev eth1
 net srv-datos ip route replace default via 172.16.2.49 dev eth1
+net srv-extra ip addr replace 172.16.2.52/29 dev eth1
+net srv-extra ip route replace default via 172.16.2.49 dev eth1
 net externo ip addr replace 203.0.113.2/29 dev eth1
 net externo ip route replace default via 203.0.113.1 dev eth1
 # Habilitar interfaces por seguridad
 for iface in eth1 eth2 eth3 eth4; do net r1 ip link set "$iface" up; done
 for iface in eth1 eth2 eth3; do net r2 ip link set "$iface" up; done
 for iface in eth1 eth2; do net r3 ip link set "$iface" up; done
-for nodo in pc-admin pc-ventas srv-web srv-datos externo; do net "$nodo" ip link set eth1 up; done
+for nodo in pc-admin pc-ventas srv-web srv-datos srv-extra externo; do net "$nodo" ip link set eth1 up; done
 echo 'Direcciones IP configuradas.'

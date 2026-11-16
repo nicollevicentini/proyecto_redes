@@ -1,0 +1,193 @@
+    1  clear
+    2  nano
+    3  clear
+    4  mdkir -p netlab/semana1
+    5  clear
+    6  mkdir -p netlab/semana1
+    7  cd netlab/semana1
+    8  touch evidencias.txt
+    9  hostname > evidencias.txt
+   10  whoami >> evidencias.txt
+   11  uname -a >> evidencias.txt
+   12  date >> evidencias.txt
+   13  ip addr >> evidencias.txt
+   14  df -h
+   15  free -h
+   16  top
+   17  q
+   18  man ping
+   19  q
+   20  clear
+   21  df -h
+   22  free -h
+   23  top
+   24  man ping
+   25  ping --help
+   26  grep "error" /var/log/syslog
+   27  nano evidencias.txt
+   28  df -h >> evidencias.txt
+   29  free -h >> evidencias.txt
+   30  grep "error" /var/log/syslog >> evidenvcias.txt
+   31  nano evidencias.txt
+   32  clear
+   33  cat evidencias.txt
+   34  cp evidencias.txt respaldo.txt
+   35  mv respaldo.txt /tmp
+   36  rm /tmp/respaldo.txt
+   37  history > historial.txt
+   38  cat historial.txt
+   39  exit
+   40  ssh nicollevicentini@mbpro-nicolle.local
+   41  ssh nicollevicentini@192.168.1.82
+   42  clea
+   43  clear
+   44  ls
+   45  cd netlab
+   46  cd semana1
+   47  ls
+   48  cat evidenvcias.txt
+   49  clear
+   50  cat evidencias.txt
+   51  grep "error" /var/log/syslog >> evidencias.txt
+   52  nano evidencias.txt
+   53  clear
+   54  ls
+   55  rm evidenvcias.txt
+   56  ls
+   57  scp *.txt nicollevicentini@192.168.1.82/Users/nicollevicentini/Desktop
+   58  scp *.txt nicollevicentini@192.168.1.82:Users/nicollevicentini/Desktop
+   59  scp *.txt nicollevicentini@192.168.1.82:Users
+   60  scp *.txt nicollevicentini@192.168.1.82:Downloads
+   61  exit
+   62  ls
+   63  cat dns_evidencia.txt
+   64  cat http_evidencia.txt
+   65  clear
+   66  nbvbndfggdfggdfgdfgdfggffhfhg fggfdfgdf 654çclear
+   67  clear
+   68  exit
+   69  clear
+   70  ls
+   71  cat http_evidencia.txt
+   72  clear
+   73  exit
+   74  cat /etc/os-release
+   75  uname -m
+   76  containerlab version
+   77  docker --version
+   78  sudo docker ps
+   79  ping -c 3 1.1.1.1
+   80  ping -c 3 ubuntu.com
+   81  sudo apt update
+   82  sudo apt install docker.io
+   83  docker --version
+   84  sudo systemctl status docker --no-pager
+   85  sudo docker run --rm hello-world
+   86  lsb_release -a
+   87  uname -m
+   88  curl -fsSL https://get.containerlab.dev -o /tmp/install-containerlab.sh
+   89  ls -lh /tmp/install-containerlab.sh
+   90  head -n 40 /tmp/install-containerlab.sh
+   91  sudo bash /tmp/install-containerlab.sh
+   92  containerlab version
+   93  sudo docker ps
+   94  sudo usermod -aG clab-admins nicolle
+   95  sudo usermod -aG docker nicolle
+   96  getent group | grep -E 'docker|clab'
+   97  groups
+   98  sudo reboot
+   99  sudo containerlab inspect -t sesion7.clab.yaml
+  100  docker exec clab-sesion7-cliente ping -c 2 192.168.77.20
+  101  docker exec clab-sesion7-cliente curl -v -o /dev/null http://192.168.77.20
+  102  docker exec clab-sesion7-cliente curl -v -o /dev/null http://example.com
+  103  docker exec clab-sesion7-servidor-web ss -tulpn
+  104  docker exec clab-sesion7-cliente nc -zv -w 2 192.168.77.20 80
+  105  docker exec clab-sesion7-cliente nc -zv -w 2 192.168.77.20 123
+  106  echo VIDEO_SESION7 \| docker exec -i clab-sesion7-cliente nc -u -w 2 192.168.77.30 514
+  107  docker exec clab-sesion7-cliente dig +short clab-sesion7-servidor-web
+  108  docker exec clab-sesion7-cliente dig +short example.com
+  109  exit
+  110  cd /home/nicolle/containerlab/proyecto
+  111  ls -lh
+  112  ls -lh evidencias/
+  113  sudo docker ps -a --filter name=clab-netlab-g2
+  114  ls -lh docs/
+  115  sudo docker start clab-netlab-g2-r1 clab-netlab-g2-r2 clab-netlab-g2-r3
+  116  sudo docker ps --filter name=clab-netlab-g2
+  117  sudo docker exec clab-netlab-g2-r1 ip -br a
+  118  sudo docker exec clab-netlab-g2-r1 vtysh -c "show ip ospf neighbor"
+  119  for r in r1 r2 r3; do sudo docker cp clab-netlab-g2-$r:/etc/frr/frr.conf docs/frr-$r.conf; done
+  120  ls -lh docs/
+  121  cat docs/frr-r1.conf
+  122  sudo containerlab deploy -t netlab.clab.yml --dry-run
+  123  sudo ip link add sw-a type bridge
+  124  sudo ip link set sw-a up
+  125  sudo ip link add sw-b type bridge
+  126  sudo ip link set sw-b up
+  127  sudo containerlab deploy -t netlab.clab.yml --dry-run
+  128  sudo tar -czf /home/nicolle/respaldo-g2.tar.gz netlab.clab.yml config-ip.sh config-vlans.sh docs evidencias
+  129  ls -lh /home/nicolle/respaldo-g2.tar.gz
+  130  cat config-ip.sh
+  131  cat config-vlans.sh
+  132  curl -f http://10.0.2.2:8765/netlab-g2-parte1.tar.gz -o /home/nicolle/netlab-g2-parte1.tar.gz
+  133  tar -xzf /home/nicolle/netlab-g2-parte1.tar.gz -C /home/nicolle/containerlab/proyecto
+  134  ls -lh /home/nicolle/containerlab/proyecto/desplegar.sh
+  135  cd /home/nicolle/containerlab/proyecto
+  136  sudo containerlab validate -t netlab.clab.yml
+  137  bash -n desplegar.sh config-ip.sh config-vlans.sh config-ospf.sh config-nat.sh config-servicios.sh
+  138  for f in *.sh; do bash -n "$f" || break; done
+  139  sudo bash desplegar.sh
+  140  sudo docker exec clab-netlab-g2-r1 vtysh -c "show ip ospf neighbor"
+  141  sudo docker exec clab-netlab-g2-pc-admin ping -c 2 172.16.2.50
+  142  sudo docker exec clab-netlab-g2-pc-admin curl -I --max-time 5 http://172.16.2.50
+  143  sudo docker exec clab-netlab-g2-pc-admin ping -c 2 203.0.113.2
+  144  sudo docker exec clab-netlab-g2-pc-ventas ping -c 2 203.0.113.2
+  145  sudo nsenter -t $(sudo docker inspect -f '{{.State.Pid}}' clab-netlab-g2-r1) -n iptables -t nat -L POSTROUTING -n -v
+  146  P=clab-netlab-g2
+  147  sudo docker exec $P-pc-admin ping -c 2 203.0.113.2 > evidencias/ping_externo_final.txt
+  148  sudo docker exec $P-pc-ventas ping -c 2 203.0.113.2 >> evidencias/ping_externo_final.txt
+  149  sudo docker exec $P-r1 vtysh -c "show ip ospf neighbor" > evidencias/ospf_final.txt
+  150  sudo nsenter -t $(sudo docker inspect -f '{{.State.Pid}}' $P-r1) -n iptables -t nat -L POSTROUTING -n -v > evidencias/nat_final.txt
+  151  ls -lh evidencias/
+  152  cd /home/nicolle/containerlab/proyecto
+  153  mkdir -p config/r1 config/r2 config/r3
+  154  for r in r1 r2 r3; do sudo docker exec clab-netlab-g2-$r vtysh -c "write memory"; sudo docker cp clab-netlab-g2-$r:/etc/frr/frr.conf config/$r/frr.conf; sudo docker cp clab-netlab-g2-$r:/etc/frr/daemons config/$r/daemons; done
+  155  sudo nsenter -t $(sudo docker inspect -f '{{.State.Pid}}' clab-netlab-g2-r1) -n iptables -t nat -S POSTROUTING > config/r1/nat-rules.txt
+  156  sudo tar -czf /home/nicolle/netlab-g2-companero.tar.gz netlab.clab.yml *.sh config
+  157  ls -lh /home/nicolle/netlab-g2-companero.tar.gz
+  158  cat /home/nicolle/netlab-g2-companero.tar.gz > /dev/tcp/10.0.2.2/8766
+  159  ls -lh /home/nicolle/netlab-g2-companero.tar.gz
+  160  cat /home/nicolle/netlab-g2-companero.tar.gz > /dev/tcp/10.0.2.2/8766
+  161  ls -lh netlab-g2-companero.tar.gz
+  162  curl -f http://10.0.2.2:8765/monitor_g2_ajustado.zip -o /home/nicolle/monitor_g2_ajustado.zip
+  163  mkdir -p /home/nicolle/containerlab/proyecto/monitor_recibido
+  164  python3 -m zipfile -e /home/nicolle/monitor_g2_ajustado.zip /home/nicolle/containerlab/proyecto/monitor_recibido
+  165  ls -lh /home/nicolle/containerlab/proyecto/monitor_recibido
+  166  cd /home/nicolle/containerlab/proyecto
+  167  cp monitor_recibido/netlab_monitor.py monitor_recibido/monitor.json .
+  168  python3 -m json.tool monitor.json > /dev/null
+  169  sudo python3 netlab_monitor.py -c monitor.json -o evidencias/reporte_integrado.txt --json-out evidencias/reporte_integrado.json
+  170  sudo docker exec clab-netlab-g2-r2 sysctl -w net.ipv4.ip_forward=0
+  171  sudo python3 netlab_monitor.py -c monitor.json -o evidencias/reporte_falla_B.txt --json-out evidencias/reporte_falla_B.json
+  172  sudo docker exec clab-netlab-g2-r2 sysctl -w net.ipv4.ip_forward=1
+  173  sudo python3 netlab_monitor.py -c monitor.json -o evidencias/reporte_recuperado_B.txt --json-out evidencias/reporte_recuperado_B.json
+  174  curl -g
+  175  curl -f http://10.0.2.2:8765/cambioB_g2.zip -o /home/nicolle/cambioB_g2.zip
+  176  python3 -m zipfile -e /home/nicolle/cambioB_g2.zip /home/nicolle/containerlab/proyecto
+  177  cd /home/nicolle/containerlab/proyecto
+  178  python3 preparar_cambio_B.py
+  179  sudo containerlab validate -t netlab.clab.yml
+  180  for f in *.sh; do bash -n "$f" || break; done
+  181  python3 -m json.tool monitor.json > /dev/null
+  182  sudo containerlab deploy -t netlab.clab.yml --dry-run
+  183  sudo containerlab deploy -t netlab.clab.yml
+  184  sudo containerlab inspect -t netlab.clab.yml
+  185  sudo bash config-ip.sh
+  186  sudo bash config-servicios.sh
+  187  sudo docker exec clab-netlab-g2-pc-admin nc -zv -w 2 172.16.2.52 6000
+  188  sudo python3 netlab_monitor.py -c monitor.json -o evidencias/reporte_cambio_B.txt --json-out evidencias/reporte_cambio_B.json
+  189  curl -f http://10.0.2.2:8765/NetLab_Grupo2_Informe_Tecnico.docx -o docs/Informe_Tecnico.docx
+  190  curl -f http://10.0.2.2:8765/PlanVLSM_Grupo2.xlsx -o docs/Plan_VLSM.xlsx
+  191  curl -f http://10.0.2.2:8765/NetLab_Grupo2_Diagrama.png -o docs/Diagrama.png
+  192  ls -lh docs/
+  193  history > evidencias/historial.txt

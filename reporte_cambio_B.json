@@ -1,0 +1,138 @@
+{
+  "timestamp": "2026-11-15 20:08:27",
+  "verificaciones": {
+    "1_inventario": {
+      "nombre": "Inventario",
+      "estado": "OK",
+      "capa_probable": "Ninguna",
+      "disponibles": [
+        "R1 (172.16.2.49)",
+        "R2 (172.16.2.1)",
+        "R3 (172.16.2.62)",
+        "PC-Admin (172.16.2.2)",
+        "PC-Ventas (172.16.2.34)",
+        "SRV-Web (172.16.2.50)",
+        "SRV-Datos (172.16.2.51)",
+        "Externo (203.0.113.2)",
+        "SRV-Extra (172.16.2.52)"
+      ],
+      "faltantes": [],
+      "detalles": [
+        "Nodo R1 [clab-netlab-g2-r1]: OK (Activo con IP 172.16.2.49)",
+        "Nodo R2 [clab-netlab-g2-r2]: OK (Activo con IP 172.16.2.1)",
+        "Nodo R3 [clab-netlab-g2-r3]: OK (Activo con IP 172.16.2.62)",
+        "Nodo PC-Admin [clab-netlab-g2-pc-admin]: OK (Activo con IP 172.16.2.2)",
+        "Nodo PC-Ventas [clab-netlab-g2-pc-ventas]: OK (Activo con IP 172.16.2.34)",
+        "Nodo SRV-Web [clab-netlab-g2-srv-web]: OK (Activo con IP 172.16.2.50)",
+        "Nodo SRV-Datos [clab-netlab-g2-srv-datos]: OK (Activo con IP 172.16.2.51)",
+        "Nodo Externo [clab-netlab-g2-externo]: OK (Activo con IP 203.0.113.2)",
+        "Nodo SRV-Extra [clab-netlab-g2-srv-extra]: OK (Activo con IP 172.16.2.52)"
+      ]
+    },
+    "2_interfaces_vlans": {
+      "nombre": "Interfaces y VLANs",
+      "estado": "OK",
+      "capa_probable": "Ninguna",
+      "fallas": [],
+      "detalles": [
+        "R1 [eth1]: OK (Estado UP, IP 172.16.2.49/29)",
+        "R1 [eth2]: OK (Estado UP, IP 172.16.2.57/30)",
+        "R1 [eth3]: OK (Estado UP, IP 172.16.2.65/30)",
+        "R1 [eth4]: OK (Estado UP, IP 203.0.113.1/29)",
+        "R2 [eth1.10]: OK (Estado UP, IP 172.16.2.1/27, VLAN 10)",
+        "R2 [eth1.20]: OK (Estado UP, IP 172.16.2.33/28, VLAN 20)",
+        "R2 [eth2]: OK (Estado UP, IP 172.16.2.58/30)",
+        "R2 [eth3]: OK (Estado UP, IP 172.16.2.61/30)",
+        "R3 [eth1]: OK (Estado UP, IP 172.16.2.62/30)",
+        "R3 [eth2]: OK (Estado UP, IP 172.16.2.66/30)",
+        "PC-Admin [eth1]: OK (Estado UP, IP 172.16.2.2/27, VLAN 10)",
+        "PC-Ventas [eth1]: OK (Estado UP, IP 172.16.2.34/28, VLAN 20)",
+        "SRV-Web [eth1]: OK (Estado UP, IP 172.16.2.50/29)",
+        "SRV-Datos [eth1]: OK (Estado UP, IP 172.16.2.51/29)",
+        "Externo [eth1]: OK (Estado UP, IP 203.0.113.2/29)",
+        "SRV-Extra [eth1]: OK (Estado UP, IP 172.16.2.52/29)"
+      ]
+    },
+    "3_rutas": {
+      "nombre": "Rutas",
+      "estado": "OK",
+      "capa_probable": "Ninguna",
+      "fallas": [],
+      "detalles": [
+        "R1: OK - Ruta 172.16.2.48/29 (CONECTADA) presente -> [172.16.2.48/29 dev eth1 proto kernel scope link src 172.16.2.49 ]",
+        "R1: OK - Ruta 172.16.2.56/30 (CONECTADA) presente -> [172.16.2.56/30 dev eth2 proto kernel scope link src 172.16.2.57 ]",
+        "R1: OK - Ruta 172.16.2.64/30 (CONECTADA) presente -> [172.16.2.64/30 dev eth3 proto kernel scope link src 172.16.2.65 ]",
+        "R1: OK - Ruta 203.0.113.0/29 (CONECTADA) presente -> [203.0.113.0/29 dev eth4 proto kernel scope link src 203.0.113.1]",
+        "R1: OK - Ruta 172.16.2.0/27 (OSPF) presente -> [172.16.2.0/27 nhid 22 via 172.16.2.58 dev eth2 proto ospf metric 20 ]",
+        "R1: OK - Ruta 172.16.2.32/28 (OSPF) presente -> [172.16.2.32/28 nhid 22 via 172.16.2.58 dev eth2 proto ospf metric 20 ]",
+        "R1: OK - Ruta 172.16.2.60/30 (OSPF) presente -> [172.16.2.60/30 nhid 27 proto ospf metric 20 ]",
+        "R2: OK - Ruta 172.16.2.0/27 (CONECTADA) presente -> [172.16.2.0/27 dev eth1.10 proto kernel scope link src 172.16.2.1 ]",
+        "R2: OK - Ruta 172.16.2.32/28 (CONECTADA) presente -> [172.16.2.32/28 dev eth1.20 proto kernel scope link src 172.16.2.33 ]",
+        "R2: OK - Ruta 172.16.2.56/30 (CONECTADA) presente -> [172.16.2.56/30 dev eth2 proto kernel scope link src 172.16.2.58 ]",
+        "R2: OK - Ruta 172.16.2.60/30 (CONECTADA) presente -> [172.16.2.60/30 dev eth3 proto kernel scope link src 172.16.2.61 ]",
+        "R2: OK - Ruta 172.16.2.48/29 (OSPF) presente -> [172.16.2.48/29 nhid 28 via 172.16.2.57 dev eth2 proto ospf metric 20 ]",
+        "R2: OK - Ruta 172.16.2.64/30 (OSPF) presente -> [172.16.2.64/30 nhid 29 proto ospf metric 20 ]",
+        "R3: OK - Ruta 172.16.2.60/30 (CONECTADA) presente -> [172.16.2.60/30 dev eth1 proto kernel scope link src 172.16.2.62 ]",
+        "R3: OK - Ruta 172.16.2.64/30 (CONECTADA) presente -> [172.16.2.64/30 dev eth2 proto kernel scope link src 172.16.2.66 ]",
+        "R3: OK - Ruta 172.16.2.0/27 (OSPF) presente -> [172.16.2.0/27 nhid 14 via 172.16.2.61 dev eth1 proto ospf metric 20 ]",
+        "R3: OK - Ruta 172.16.2.32/28 (OSPF) presente -> [172.16.2.32/28 nhid 14 via 172.16.2.61 dev eth1 proto ospf metric 20 ]",
+        "R3: OK - Ruta 172.16.2.48/29 (OSPF) presente -> [172.16.2.48/29 nhid 19 via 172.16.2.65 dev eth2 proto ospf metric 20 ]",
+        "R3: OK - Ruta 172.16.2.56/30 (OSPF) presente -> [172.16.2.56/30 nhid 20 proto ospf metric 20 ]"
+      ]
+    },
+    "4_conectividad": {
+      "nombre": "Conectividad",
+      "estado": "OK",
+      "capa_probable": "Ninguna",
+      "fallas": [],
+      "detalles": [
+        "PC-Admin hacia SRV-Web (PC-Admin -> 172.16.2.50): OK (0% pérdida, RTT avg: 0.771 ms, 3 saltos)",
+        "PC-Admin hacia SRV-Datos (PC-Admin -> 172.16.2.51): OK (0% pérdida, RTT avg: 0.419 ms, 3 saltos)",
+        "PC-Ventas hacia SRV-Web (PC-Ventas -> 172.16.2.50): OK (0% pérdida, RTT avg: 0.800 ms, 3 saltos)",
+        "PC-Ventas hacia SRV-Datos (PC-Ventas -> 172.16.2.51): OK (0% pérdida, RTT avg: 0.687 ms, 3 saltos)",
+        "PC-Admin hacia Externo (PC-Admin -> 203.0.113.2): OK (0% pérdida, RTT avg: 0.448 ms, 3 saltos)",
+        "PC-Ventas hacia Externo (PC-Ventas -> 203.0.113.2): OK (0% pérdida, RTT avg: 0.428 ms, 3 saltos)",
+        "PC-Admin hacia SRV-Extra (PC-Admin -> 172.16.2.52): OK (0% pérdida, RTT avg: 0.629 ms, 3 saltos)",
+        "PC-Ventas hacia SRV-Extra (PC-Ventas -> 172.16.2.52): OK (0% pérdida, RTT avg: 0.463 ms, 3 saltos)"
+      ]
+    },
+    "5_servicios": {
+      "nombre": "Servicios",
+      "estado": "OK",
+      "capa_probable": "Ninguna",
+      "fallas": [],
+      "detalles": [
+        "Servicio Web HTTP (172.16.2.50:80): OK (Activo y accesible vía TCP)",
+        "Servicio de Datos TCP (172.16.2.51:5000): OK (Activo y accesible vía TCP)",
+        "Servicio adicional TCP (Cambio B) (172.16.2.52:6000): OK (Activo y accesible vía TCP)"
+      ]
+    },
+    "6_ospf": {
+      "nombre": "OSPF",
+      "estado": "OK",
+      "capa_probable": "Ninguna",
+      "fallas": [],
+      "detalles": [
+        "R1: OK (2 vecinos en Full -> 2.2.2.2 (Full/DR), 3.3.3.3 (Full/DR))",
+        "R2: OK (2 vecinos en Full -> 1.1.1.1 (Full/Backup), 3.3.3.3 (Full/DR))",
+        "R3: OK (2 vecinos en Full -> 2.2.2.2 (Full/Backup), 1.1.1.1 (Full/Backup))"
+      ]
+    },
+    "7_nat": {
+      "nombre": "NAT",
+      "estado": "OK",
+      "capa_probable": "Ninguna",
+      "fallas": [],
+      "detalles": [
+        "R1: OK - Regla MASQUERADE detectada en eth4 (Contador pkts: 18)",
+        "Traducción NAT: OK - externo observó la IP de R1 (203.0.113.1)"
+      ]
+    }
+  },
+  "diagnostico": {
+    "orden_evaluacion": "Enlace/VLAN -> IP/Gateway -> Rutas/OSPF -> NAT -> Servicios",
+    "estado_general": "OK",
+    "capa_probable": "Ninguna (Operación Normal)",
+    "explicacion": "Todas las capas (Enlace/VLAN -> IP/Gateway -> Rutas/OSPF -> NAT -> Servicios) superaron las pruebas."
+  }
+}

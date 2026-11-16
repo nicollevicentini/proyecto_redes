@@ -18,6 +18,7 @@ topology:
     pc-ventas: {kind: linux, cmd: "sleep infinity"}
     srv-web: {kind: linux, image: nginx:alpine}
     srv-datos: {kind: linux, cmd: "sleep infinity"}
+    srv-extra: {kind: linux, cmd: "sleep infinity"}
     externo: {kind: linux, cmd: "sleep infinity"}
 
   links:
@@ -30,5 +31,6 @@ topology:
     - endpoints: ["r1:eth1", "sw-b:b1"]
     - endpoints: ["srv-web:eth1", "sw-b:b2"]
     - endpoints: ["srv-datos:eth1", "sw-b:b3"]
+    - endpoints: ["srv-extra:eth1", "sw-b:b4"]
     - endpoints: ["r1:eth4", "externo:eth1"]
 
